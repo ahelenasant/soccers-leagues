@@ -1,0 +1,28 @@
+{
+  "name": "soccers-leagues",
+  "version": "1.0.0",
+  "description": "Information about the main soccer's leagues",
+  "main": "index.html",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "http-server ./app -a localhost -p 8000 -c-1"
+  },
+  "keywords": [
+    "soccer",
+    "leagues",
+    "cups"
+  ],
+  "author": "Helena Santana da Silva <hsantanasilva@outlook.com>",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.8.2",
+    "bootstrap": "^5.1.1",
+    "angular-resource": "*",
+    "angular-route": "*"
+  },
+  "devDependencies": {
+    "http-server": "*"
+  },
+  "gitIgnore": "node-modules",
+  "http.proxySupport": "off"
+}
