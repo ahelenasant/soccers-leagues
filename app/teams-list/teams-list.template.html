@@ -1,0 +1,23 @@
+<header class="container text-light pt-2">
+  <a href="#!" class="icon-back text-light float-start my-4 me-3"><i class="bi bi-arrow-left-circle"></i></a>
+  <h1 class="display-2 text-uppercase m-0">{{league.competition.name}}</h1>
+  <p class="lead">Participating teams</p>
+</header>
+<main class="container my-4 px-2" id="teams">
+  <table class="table bg-dark bg-opacity-75 align-middle rounded">
+    <thead class="text-light">
+      <tr>
+        <th scope="col">Logo</th>
+        <th scope="col">Team</th>
+        <th scope="col">Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="bg-opacity-75" ng-repeat="team in teams">
+        <td class="img-team"><img src="{{team.crestUrl}}" alt=""></td>
+        <td>{{team.name}}</td>
+        <td>{{team.area.name}}</td>
+      </tr>
+
+  </table>
+</main>
