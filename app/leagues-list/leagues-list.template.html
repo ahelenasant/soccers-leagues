@@ -1,0 +1,21 @@
+<header class="container text-light pt-2">
+  <h1 class="display-2 text-uppercase m-0">Soccers Leagues</h1>
+  <p class="lead">Information about the main soccer leagues and cups</p>
+</header>
+<main class="container my-4 text-light" id="leagues">
+  <div class="row row-cols-lg-3 row-cols-sm-2 row-cols-1 g-3">
+    <div class="col" ng-repeat="league in leagues">
+      <div class="card pb-0 bg-dark bg-opacity-75 h-100">
+        <div class="img-card text-center">
+          <img src="{{league.emblemUrl}}" class="card-top-img p-3 w-auto mw-100 mh-100" alt="{{league.name}}">
+        </div>
+        <div class="card-body text-center align-middle d-flex flex-column justify-content-between">
+          <h3 class="fw-light">{{league.name}}</h3>
+          <p class="card-text">{{league.area.name}}</p>
+          <p class="card-text">Start date: {{league.currentSeason.startDate}}<br>End date: {{league.currentSeason.endDate}}</p>
+          <a href="#!/{{league.id}}/teams" ng-click="" class="btn btn-light align-self-center">SEE MORE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
