@@ -23,6 +23,5 @@
   "devDependencies": {
     "http-server": "*"
   },
-  "gitIgnore": "node-modules",
   "http.proxySupport": "off"
 }
