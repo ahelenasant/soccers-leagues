@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="leaguesApp">
+<html lang="en" ng-app="soccersLeaguesApp">
 
 <head>
   <meta charset="UTF-8">
@@ -9,38 +9,25 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="lib/angular/angular.min.js"></script>
+  <script src="lib/angular-resource/angular-resource.js"></script>
+  <script src="lib/angular-route/angular-route.js"></script>
+  <script src="app.module.js"></script>
+  <script src="app.config.js"></script>
+  <script src="leagues-list/leagues-list.module.js"></script>
+  <script src="leagues-list/leagues-list.controller.js"></script>
+  <script src="teams-list/teams-list.modules.js"></script>
+  <script src="teams-list/teams-list.controller.js"></script>
   <title>Soccer's Leagues</title>
 </head>
 
-<body ng-controller="LeaguesListCtrl">
-  <header class="container text-light pt-2">
-    <h1 class="display-2 text-uppercase m-0">Soccer's Leagues</h1>
-    <p class="lead">Information about the main soccer leagues and cups</p>
-  </header>
-  <main class="container my-4 text-light" id="leagues" ng-app="leaguesApp">
-    <div class="row row-cols-lg-3 row-cols-sm-2 row-cols-1 g-3" ng-controller="leaguesCtrl as ctrl">
-      <div class="col" ng-repeat="league in leagues">
-        <div class="card pb-0 bg-dark bg-opacity-75 h-100">
-          <div class="img-card text-center">
-            <img src="{{league.emblemUrl}}" class="card-top-img p-3 w-auto mw-100 mh-100" alt="">
-          </div>
-          <div class="card-body text-center align-middle d-flex flex-column justify-content-between">
-            <h3 class="fw-light">{{league.name}}</h3>
-            <p class="card-text">{{league.area.name}}</p>
-            <p class="card-text">Start date: {{league.currentSeason.startDate}}<br>End date: {{league.currentSeason.endDate}}</p>
-            <a href="info-league.html" ng-click="ctrl.getLeagueId(league.id)" class="btn btn-light align-self-center">SEE MORE</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
+<body>
+  <div ng-view></div>
   <footer class="text-center bg-black text-light pt-2 pb-2">
     <small>
       <p class="mb-0">Desenvolvido por Helena Santana</p>
       <p class="mb-0">Todos os direitos reservados</p>
     </small>
   </footer>
-  <a href="#" class="icon-top text-light"><i class="bi bi-arrow-up-circle-fill"></i></a>
 </body>
 
 </html>
