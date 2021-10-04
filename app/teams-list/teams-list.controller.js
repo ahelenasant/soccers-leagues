@@ -11,7 +11,6 @@ angular.
         .then(function(response){
           $scope.league = response.data;
           $scope.teams = response.data.teams;
-          console.log($scope.teams);
         })
       }
     ]
