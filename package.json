@@ -2,7 +2,7 @@
   "name": "soccers-leagues",
   "version": "1.0.0",
   "description": "Information about the main soccer's leagues",
-  "main": "index.html",
+  "main": "app/index.html",
   "scripts": {
     "prestart": "npm install",
     "start": "http-server ./app -a localhost -p 8000 -c-1"
