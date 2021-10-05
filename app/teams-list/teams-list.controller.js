@@ -11,6 +11,14 @@ angular.
         .then(function(response){
           $scope.league = response.data;
           $scope.teams = response.data.teams;
+          let arrayTeams = Array.from($scope.teams)
+          if($scope.league.season.winner != null){
+            arrayTeams.forEach(team => {
+              if(team.id == $scope.league.season.winner.id){
+                team.winner = 'bg-success bg-opacity-75'
+              }
+            })
+          }
         })
       }
     ]
