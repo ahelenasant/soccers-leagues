@@ -10,6 +10,12 @@ angular.
       })
       .then(function(response){
         $scope.leagues = response.data.competitions;
+        var arrayLeagues = Array.from($scope.leagues);
+        arrayLeagues.forEach((league) => {
+          if(league.emblemUrl == null){
+            league.emblemUrl = 'images/not-found.png';
+          }
+        })
       })
     },
   )
