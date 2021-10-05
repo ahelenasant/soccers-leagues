@@ -23,16 +23,7 @@ h1 {
   max-width: 100%;
   max-height: 100px;
 }
-td {
-  color: #eee;
-  font-size: 1.25em;
-}
 .icon-back,
 .icon-top {
   font-size: 1.5em;
-}
-.icon-top {
-  position: fixed;
-  bottom: 10vh;
-  right: 5vw;
 }
